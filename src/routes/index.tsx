@@ -184,49 +184,12 @@ function Index() {
         </div>
       </section>
 
-      {/* CV Preview */}
-      <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="rounded-2xl glass p-4 sm:p-6 md:p-8"
-        >
-          <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
-            <div className="flex items-center gap-3">
-              <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
-                <FileText size={20} />
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold sm:text-2xl">My Resume</h2>
-                <p className="text-sm text-muted-foreground">Quick preview — download for the full PDF.</p>
-              </div>
-            </div>
-            <a
-              href={cvAsset.url}
-              download="Dinali_Chamodya_CV.pdf"
-              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 glow"
-            >
-              <Download size={16} />
-              Download PDF
-            </a>
-          </div>
-          <div className="overflow-hidden rounded-xl border border-border bg-black/40">
-            <iframe
-              src={`${cvAsset.url}#view=FitH`}
-              title="Dinali Chamodya CV preview"
-              className="h-[60vh] w-full sm:h-[70vh] md:h-[80vh]"
-            />
-          </div>
-        </motion.div>
-      </section>
-
+      
       {/* Highlights */}
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-24">
         <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: Database, title: "Database Engineering", desc: "Data warehousing, ETL with SSIS, OLAP cubes, and optimized SQL across MySQL, MS SQL Server & Oracle." },
+            { icon: Database, title: "Data Engineering", desc: "Data warehousing, ETL with SSIS, OLAP cubes, and optimized SQL across MySQL, MS SQL Server & Oracle." },
             { icon: Brain, title: "AI / ML", desc: "Predictive modeling, AI chatbots with Gemini API, and ML pipelines using Python & scikit-learn." },
             { icon: LineChart, title: "Data Analytics & BI", desc: "Building interactive dashboards, KPI reports, business intelligence solutions, and data visualizations using Power BI, SQL, Python, and analytical techniques to support data-driven decision making." },
             { icon: Code2, title: "Software Eng.", desc: "Full-stack apps with React, Node.js, Spring Boot, Flask — shipping real systems used by real users." },

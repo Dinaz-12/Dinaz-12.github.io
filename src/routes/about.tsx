@@ -15,9 +15,19 @@ export const Route = createFileRoute("/about")({
 
 function About() {
   const cards = [
-    { icon: GraduationCap, title: "Education", text: "BSc (Hons) in IT specializing in Data Science at SLIIT (Nov 2023 – Present). GPA: 3.51 / 4.00." },
-    { icon: Heart, title: "Passion", text: "Database Engineering, Data Warehousing, AI/ML, and building enterprise systems that turn raw data into decisions." },
-    { icon: Target, title: "Goal", text: "To grow into a well-rounded engineer across databases, cloud, AI, and infrastructure — and ship systems that scale." },
+    { icon: GraduationCap, title: "Education",   text: (
+    <>
+      BSc (Hons) in Information Technology specializing in Data Science, SLIIT.
+      <br />
+      GPA: 3.51 / 4.00
+      <br />
+      Expected Graduation: 2027
+      <br />
+      Focused on Data Engineering, AI/ML, Data Analysis, Business Intelligence, and Software Engineering.
+    </>
+  ) },
+    { icon: Heart, title: "Passion", text: "Building data-driven solutions that combine Data Engineering, Analytics, and AI to solve real-world business problems." },
+    { icon: Target, title: "Goal", text: "Aspiring Data Engineer and AI Practitioner focused on building scalable data platforms, intelligent applications, and business analytics solutions." },
   ];
   const coursework = [
     "Machine Learning",
@@ -37,23 +47,19 @@ function About() {
           transition={{ delay: 0.2 }}
           className="space-y-4 text-lg leading-relaxed text-muted-foreground"
         >
-          <p>
-            Hi! I'm <span className="text-foreground font-medium">Dinali Chamodya</span>, a
-            Data Science undergraduate based in Colombo, Sri Lanka, with a strong interest in
-            <span className="text-foreground"> Database Engineering, Data Warehousing, and Enterprise Systems</span>.
-          </p>
-          <p>
-            I'm skilled in <span className="text-gradient font-semibold">SQL, Python, and ETL processes</span>, with hands-on
-            experience building data warehouse solutions, developing ETL pipelines with SSIS,
-            writing optimized queries across MySQL, MS SQL Server, and Oracle, and shipping
-            full-stack applications.
-          </p>
-          <p>
-            I love the entire pipeline — from modeling data, to designing star schemas and
-            OLAP cubes, to training ML models, to wrapping it all in clean React/Spring Boot apps.
-            I'm passionate about learning database administration, cloud technologies, and
-            automation in professional environments.
-          </p>
+      <p>
+        Hi! I'm <span className="text-foreground font-medium">Dinali Chamodya</span>, a Data Science undergraduate at SLIIT with a strong interest in
+        <span className="text-foreground"> Data Engineering, AI/ML, Data Analysis, Business Intelligence, and Enterprise Systems</span>.
+      </p>
+
+      <p>
+        Skilled in <span className="text-gradient font-semibold">SQL, Python, ETL, Data Warehousing, Power BI, and Full-Stack Development</span>,
+        I enjoy building data-driven solutions that convert complex data into actionable insights.
+      </p>
+
+      <p>
+        I'm passionate about leveraging analytics, machine learning, and modern technologies to create impactful solutions while continuously expanding my expertise in cloud and data technologies.
+      </p>
 
           <div className="pt-2">
             <h3 className="text-sm uppercase tracking-wider text-foreground">Relevant Coursework</h3>
