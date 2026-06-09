@@ -2,6 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "../components/PageShell";
 import { motion } from "framer-motion";
 import { Award, ExternalLink } from "lucide-react";
+import aiml1 from "../assets/certificates/aiml-stg1.png";
+import kaggle1 from "../assets/certificates/kaggle-ml1.png";
+import mongodbImg from "../assets/certificates/mongodb.png";
+import pythonIBM from "../assets/certificates/python-ibm.png";
+import pythonMora from "../assets/certificates/python-moratu.png";
+import mongodbPdf from "../assets/certificates/mongodb.pdf";
 
 export const Route = createFileRoute("/certificates")({
   head: () => ({
@@ -16,7 +22,7 @@ export const Route = createFileRoute("/certificates")({
 type Cert = {
   name: string;
   issuer: string;
-  logo?: string;
+  image?: string;
   url?: string;
 };
 
@@ -24,44 +30,43 @@ const certs: Cert[] = [
   {
     name: "AI/ML Engineer — Stage 1",
     issuer: "SLIIT",
-    logo: "https://logo.clearbit.com/sliit.lk",
-    url: "https://www.sliit.lk",
+    image: aiml1,
+    url: aiml1,
   },
   {
     name: "AI/ML Engineer — Stage 2",
     issuer: "SLIIT",
-    logo: "https://logo.clearbit.com/sliit.lk",
-    url: "https://www.sliit.lk",
+    image: aiml1,
   },
   {
     name: "Python Programming",
     issuer: "University of Moratuwa",
-    logo: "https://logo.clearbit.com/uom.lk",
-    url: "https://open.uom.lk",
+    image: pythonMora,
+    url: pythonMora,
   },
   {
     name: "Python 101 for Data Science",
     issuer: "IBM Cognitive Class",
-    logo: "https://logo.clearbit.com/ibm.com",
-    url: "https://cognitiveclass.ai",
+    image: pythonIBM,
+    url: pythonIBM,
   },
   {
     name: "MongoDB Administration & Monitoring",
     issuer: "MongoDB University",
-    logo: "https://logo.clearbit.com/mongodb.com",
-    url: "https://university.mongodb.com",
+    image: mongodbImg,
+    url: mongodbPdf,
   },
   {
     name: "Intro to Machine Learning",
     issuer: "Kaggle",
-    logo: "https://logo.clearbit.com/kaggle.com",
-    url: "https://www.kaggle.com/learn/intro-to-machine-learning",
+    image: kaggle1,
+    url: kaggle1,
   },
   {
     name: "Intermediate Machine Learning",
     issuer: "Kaggle",
-    logo: "https://logo.clearbit.com/kaggle.com",
-    url: "https://www.kaggle.com/learn/intermediate-machine-learning",
+    image: kaggle1,
+    url: kaggle1,
   },
 ];
 
@@ -80,20 +85,12 @@ function Certificates() {
             className="flex flex-col gap-4 rounded-xl glass p-5 transition-shadow duration-300 hover:glow-hover"
           >
             <div className="flex items-start gap-4">
-              <div className="inline-flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/95 p-2">
-                {c.logo ? (
-                  <img
-                    src={c.logo}
-                    alt={`${c.issuer} logo`}
-                    className="h-full w-full object-contain"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.currentTarget as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                ) : (
-                  <Award size={22} className="text-primary" />
-                )}
+              <div className="h-12 w-16 overflow-hidden rounded-lg border border-primary/20 bg-white p-1">
+                <img
+                  src={c.image}
+                  alt={c.name}
+                  className="h-full w-full object-contain"
+                />
               </div>
               <div className="flex-1">
                 <h3 className="font-semibold leading-tight">{c.name}</h3>
@@ -106,7 +103,7 @@ function Certificates() {
               rel="noopener noreferrer"
               className="group inline-flex w-fit items-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-primary/20"
             >
-              View Certificate
+              View Credential
               <ExternalLink size={14} className="transition-transform group-hover:translate-x-0.5" />
             </a>
           </motion.div>
