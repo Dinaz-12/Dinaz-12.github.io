@@ -129,7 +129,7 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] text-muted-foreground sm:px-4 sm:py-2 sm:text-xs"
             >
               <Sparkles size={14} className="text-primary shrink-0" />
-              <span className="truncate">Database Engineer Intern · Data Science Undergrad</span>
+              <span className="truncate">Open to Internships • Data Science Undergraduate</span>
             </motion.div>
 
             <motion.h1
@@ -149,8 +149,7 @@ function Index() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="mx-auto mt-5 max-w-xl text-base text-muted-foreground sm:text-lg md:mx-0"
             >
-              Data Science undergraduate at SLIIT (GPA 3.51/4.00) with a strong interest in
-              Database Engineering, Data Warehousing, AI/ML, and full-stack Software Engineering.
+             Data Science undergraduate passionate about Data Engineering, AI/ML, Business Intelligence, and Software Engineering. I build data-driven solutions that transform raw data into actionable insights.
             </motion.p>
 
             <motion.div
