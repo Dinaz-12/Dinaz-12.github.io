@@ -73,8 +73,34 @@ const projects = [
   },
   {
     title: "Personal Portfolio Website",
-    desc: "This very site — built with React, TanStack Start, Tailwind, and Framer Motion. Focused on UI/UX, accessibility, and performance.",
-    tags: ["React", "TypeScript", "Tailwind", "Framer Motion"],
+    desc: "Designed and developed a professional portfolio website to showcase Data Science, AI/ML, Data Engineering, Business Intelligence, and Software Engineering projects. Features dark/light mode, responsive design, interactive animations, and recruiter-friendly navigation.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Dark/Light Mode", "Responsive Design"],
+    github: "https://github.com/Dinaz-12/Dinali-Portfolio",
+    live: "",
+  },
+  {
+    title: "HelpAura – Online Help Desk System",
+    desc: "A support ticket management platform designed to streamline issue reporting, request tracking, and customer support workflows through a user-friendly web interface.",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/Dinaz-12/HelpAura--Online-Help-Desk",
+  },
+  {
+    title: "HopeFlow – Blood Donation Management System",
+    desc: "A full-stack web application for managing blood donations, donor records, blood bank inventory, and user administration with real-time updates and secure authentication.",
+    tags: ["PHP", "MySQL", "JavaScript", "AJAX"],
+    github: "https://github.com/Dinaz-12/sliit-iwt-project-2024",
+  },
+  {
+    title: "Wellnex – Personal Wellness Companion",
+    desc: "A wellness-focused Android application featuring habit tracking, mood journaling, hydration monitoring, wellness music, analytics, and personalized notifications to support healthier daily routines.",
+    tags: ["Java", "Firebase", "Android", "Material Design"],
+    github: "https://github.com/Dinaz-12/Wellnex-Mobile-App",
+  },
+  {
+    title: "BabyBliss – Baby Products Shopping App",
+    desc: "Designed and developed a mobile shopping application for mothers to discover and purchase baby food, formula, snacks, and essential baby products. Focused on creating a calm, user-friendly experience through intuitive navigation, clean layouts, and a nurturing visual design.",
+    tags: [ "Kotlin", "Android Studio", "Material Design 3", "Mobile Development", "UI/UX Design" ],
+    github: "https://github.com/Dinaz-12/BabyBlissApp",
   },
 ];
 
