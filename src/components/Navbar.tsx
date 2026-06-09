@@ -37,14 +37,17 @@ export function Navbar() {
         <ul className="hidden md:flex items-center gap-1 lg:gap-2">
           {links.map((l) => (
             <li key={l.to}>
-              <Link
-                to={l.to}
-                className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                activeProps={{ className: "rounded-md px-3 py-2 text-sm text-foreground font-medium" }}
-                activeOptions={{ exact: l.to === "/" }}
-              >
-                {l.label}
-              </Link>
+<Link
+  to={l.to}
+  className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+  activeProps={{
+    className:
+      "rounded-md px-3 py-2 text-sm font-semibold text-primary bg-primary/10 shadow-[0_0_12px_rgba(139,92,246,0.25)]"
+  }}
+  activeOptions={{ exact: l.to === "/" }}
+>
+  {l.label}
+</Link>
             </li>
           ))}
         </ul>

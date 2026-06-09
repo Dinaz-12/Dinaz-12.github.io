@@ -8,9 +8,9 @@ export function Footer() {
           © {new Date().getFullYear()} — Built with passion for data.
         </p>
         <div className="flex gap-4">
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github size={20} /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
-          <a href="mailto:hello@example.com" className="text-muted-foreground hover:text-primary transition-colors"><Mail size={20} /></a>
+          <a href="https://github.com/Dinaz-12" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github size={20} /></a>
+          <a href="https://www.linkedin.com/in/dinali-chamodya/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin size={20} /></a>
+          <a href="mailto:Dinalichamodya12@gmail.com" className="text-muted-foreground hover:text-primary transition-colors"><Mail size={20} /></a>
         </div>
       </div>
     </footer>
