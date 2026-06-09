@@ -108,7 +108,7 @@ function Index() {
               transition={{ delay: 1 }}
               className="absolute -bottom-3 -left-2 rounded-xl glass px-3 py-1.5 text-[11px] sm:-bottom-4 sm:-left-4 sm:px-4 sm:py-2 sm:text-xs"
             >
-              <span className="text-primary font-semibold">SLIIT</span> · GPA 3.51
+              <span className="text-primary font-semibold">Internship</span> availability
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
