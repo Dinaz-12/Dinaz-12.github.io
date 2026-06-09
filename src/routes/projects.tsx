@@ -106,7 +106,7 @@ const projects = [
 
 function Projects() {
   return (
-    <PageShell title="Projects" subtitle="A selection of things I've built across Data Engineering, AI/ML, and SE.">
+    <PageShell title="Projects" subtitle="A selection of things I've built across Data Engineering, AI/ML, Data Analysis, Business Intelligence, and Software Engineering.">
       <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
           <motion.article

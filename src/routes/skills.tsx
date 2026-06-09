@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "../components/PageShell";
 import { motion } from "framer-motion";
-import { Database, Workflow, Brain, Code2, BarChart3, LineChart, type LucideIcon } from "lucide-react";
+import { Database, Workflow, Brain, Code2, BarChart3, LineChart, type LucideIcon, Cloud } from "lucide-react";
 
 export const Route = createFileRoute("/skills")({
   head: () => ({
@@ -31,19 +31,19 @@ const categories: Category[] = [
     title: "Data Engineering",
     icon: Workflow,
     blurb: "Building reliable pipelines and warehouses for analytics-ready data.",
-    skills: ["SSIS (ETL)", "SSAS (OLAP)", "Data Warehousing", "Star Schema", "Power Query", "Data Cleaning", "Airflow Basics", "API Integration"],
+    skills: ["SSIS (ETL)", "SSAS (OLAP)", "Data Warehousing", "Star Schema", "Power Query", "Data Cleaning","Data Pipelines", "OLAP", "Airflow Basics", "API Integration"],
   },
   {
     title: "AI / ML",
     icon: Brain,
     blurb: "Predictive modeling, NLP, and intelligent assistants.",
-    skills: ["Python", "Pandas", "NumPy", "scikit-learn", "TensorFlow", "Gemini API", "EDA", "Feature Engineering"],
+    skills: ["Python", "Pandas", "NumPy", "scikit-learn", "Machine Learning", "Gemini API", "EDA", "Feature Engineering"],
   },
   {
     title: "Data Analytics & BI",
     icon: LineChart,
     blurb: "Building interactive dashboards, KPI reports, business intelligence solutions, and data visualizations using Power BI, SQL, Python, and analytical techniques to support data-driven decision making.",
-    skills: ["Power BI", "SQL", "Python", "Data Visualization", "KPI Reporting", "Business Intelligence", "Dashboard Design", "Data-Driven Decision Making"],
+    skills: ["Power BI", "SQL", "Python", "Data Visualization", "KPI Reporting", "Business Intelligence", "Tableau", "Excel (Advanced)", "Matplotlib", "Seaborn", "Streamlit", "Jupyter","Dashboard Design", "Data-Driven Decision Making"],
   },
   {
     title: "Software Engineering",
@@ -52,10 +52,10 @@ const categories: Category[] = [
     skills: ["React", "TypeScript", "Node.js", "Express", "Flask", "Java", "Spring Boot", "REST APIs", "Git & GitHub"],
   },
   {
-    title: "BI & Analytics",
-    icon: BarChart3,
-    blurb: "Turning raw data into clear, decision-ready visual stories.",
-    skills: ["Power BI", "Tableau", "Excel (Advanced)", "Matplotlib", "Seaborn", "Streamlit", "Jupyter", "Storytelling with Data"],
+    title: "Cloud & Tools",
+    icon: Cloud,
+    blurb: "Modern development, deployment, collaboration, and cloud technologies.",
+    skills: [ "Git",  "GitHub",  "Firebase",  "Vercel", "Netlify", "Postman", "Linux", "Docker (Basic)" ],
   },
 ];
 
