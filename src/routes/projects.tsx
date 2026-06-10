@@ -76,7 +76,7 @@ const projects = [
     desc: "Designed and developed a professional portfolio website to showcase Data Science, AI/ML, Data Engineering, Business Intelligence, and Software Engineering projects. Features dark/light mode, responsive design, interactive animations, and recruiter-friendly navigation.",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Dark/Light Mode", "Responsive Design"],
     github: "https://github.com/Dinaz-12/Dinali-Portfolio",
-    live: "",
+    live: "https://dinali-portfolio.vercel.app/",
   },
   {
     title: "HelpAura – Online Help Desk System",
