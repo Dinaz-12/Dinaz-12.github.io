@@ -6,4 +6,8 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-export default defineConfig();
+export default defineConfig({
+  // Required for self-hosted Vercel deploys: Lovable skips Nitro outside its sandbox,
+  // which leaves Vercel without the `.output` server bundle and causes 404s.
+  nitro: { preset: "vercel" },
+});
