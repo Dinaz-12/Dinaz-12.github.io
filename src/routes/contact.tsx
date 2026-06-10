@@ -3,6 +3,7 @@ import { PageShell } from "../components/PageShell";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -16,6 +17,45 @@ export const Route = createFileRoute("/contact")({
 
 function Contact() {
   const [sent, setSent] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const result = await emailjs.send(
+        "service_7syqb3o",
+        "template_lpb9wai",
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "pgAxD-xjs3HCvGQDN"
+      );
+
+      console.log("EMAILJS SUCCESS:", result);
+
+      setSent(true);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+      setTimeout(() => setSent(false), 3000);
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message. Please try again.");
+    }
+  };
+
   return (
     <PageShell title="Contact Me" subtitle="Have a project, internship, or just want to chat? Let's connect.">
       <div className="grid gap-10 lg:grid-cols-2">
@@ -50,20 +90,39 @@ function Contact() {
         <motion.form
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          onSubmit={handleSubmit}
           className="rounded-xl glass p-6 space-y-4"
         >
           <div>
             <label className="text-sm text-muted-foreground">Name</label>
-            <input required className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary" />
+            <input
+              required
+              className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            />
           </div>
           <div>
             <label className="text-sm text-muted-foreground">Email</label>
-            <input required type="email" className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary" />
+            <input
+              required
+              type="email"
+              className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            />
           </div>
           <div>
             <label className="text-sm text-muted-foreground">Message</label>
-            <textarea required rows={5} className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary" />
+            <textarea
+              required
+              rows={5}
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              className="mt-1 w-full rounded-lg border border-border bg-input/40 px-3 py-2 outline-none focus:border-primary"
+            />
           </div>
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -73,6 +132,11 @@ function Contact() {
           >
             <Send size={16} /> {sent ? "Message sent!" : "Send Message"}
           </motion.button>
+          {sent && (
+            <p className="text-center text-green-400 font-medium">
+              ✅ Message sent successfully! I'll get back to you soon.
+            </p>
+          )}
         </motion.form>
       </div>
     </PageShell>
