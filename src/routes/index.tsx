@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ArrowRight, Brain, Code2, Database, Download, FileText, LineChart, Sparkles } from "lucide-react";
 import profileAsset from "../assets/profile.jpg";
-import cvAsset from "../assets/cv.pdf.asset.json";
+import cvAsset from "../assets/Dinali_Chamodya_Internship_CV.pdf";
 
 
 export const Route = createFileRoute("/")({
@@ -166,7 +166,7 @@ function Index() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <a
-                href={cvAsset.url}
+                href={cvAsset}
                 download="Dinali_Chamodya_CV.pdf"
                 className="group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg border border-primary/40 bg-primary/10 px-6 py-3 font-medium text-foreground transition-colors hover:bg-primary/20"
               >
